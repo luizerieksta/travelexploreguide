@@ -19,7 +19,7 @@ var anythingIcon = '<img class="noBorder" src="images/anything.png">';
 function makeWeatherRequest(searchCity) {
 
 
-	var weatherURL = "http://api.openweathermap.org/data/2.5/weather?APPID=75213f60187fe2361e39a8923b063644&units=metric&q="+ searchCity +"";
+	var weatherURL = "https://api.openweathermap.org/data/2.5/weather?APPID=75213f60187fe2361e39a8923b063644&units=metric&q="+ searchCity +"";
 
 	$.ajax({
 		url : weatherURL,
