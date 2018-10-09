@@ -1,6 +1,6 @@
 
 
-
+//comments
 var theInputCityName;
 
 //All the weather icons
