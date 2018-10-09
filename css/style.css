@@ -1,0 +1,132 @@
+
+html, body {
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 12px;
+	background: rgba(200,200,200,1);
+	background: -moz-linear-gradient(left, rgba(200,200,200,1) 0%, rgba(227,228,229,1) 36%, rgba(227,228,229,1) 63%, rgba(200,200,200,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(200,200,200,1)), color-stop(36%, rgba(227,228,229,1)), color-stop(63%, rgba(227,228,229,1)), color-stop(100%, rgba(200,200,200,1)));
+	background: -webkit-linear-gradient(left, rgba(200,200,200,1) 0%, rgba(227,228,229,1) 36%, rgba(227,228,229,1) 63%, rgba(200,200,200,1) 100%);
+	background: -o-linear-gradient(left, rgba(200,200,200,1) 0%, rgba(227,228,229,1) 36%, rgba(227,228,229,1) 63%, rgba(200,200,200,1) 100%);
+	background: -ms-linear-gradient(left, rgba(200,200,200,1) 0%, rgba(227,228,229,1) 36%, rgba(227,228,229,1) 63%, rgba(200,200,200,1) 100%);
+	background: linear-gradient(to right, rgba(200,200,200,1) 0%, rgba(227,228,229,1) 36%, rgba(227,228,229,1) 63%, rgba(200,200,200,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#c8c8c8', GradientType=1 );
+}
+
+h1 {
+	font-family: 'Cabin Sketch', cursive;
+	background-color: rgb(178, 130, 146);
+	text-align: center;
+	font-size: 5.3em;
+}
+
+h2 {
+	display: inline;
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1.2em;
+	text-align: center;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+select {
+	display: block;
+	border: 4px solid rgb(178, 130, 146);
+	margin: 20px auto;
+	height: 40px;
+	width: 330px;
+	font-size: 2em;
+
+}
+
+input {
+	display: block;
+	border: 4px solid rgb(178, 130, 146);
+	margin: 20px auto;
+	height: 40px;
+	width: 320px;
+	font-size: 2em;
+
+}
+
+button {
+	display: block;
+	margin: 20px auto;
+	font-size: 3em;
+	padding: 5px 26px;
+}
+
+.center_spacing {
+	margin: 20px auto;
+}
+
+img {
+	border: 2px solid black;
+	margin-bottom: -14px;
+}
+
+.weatherInfo {
+	font-size: 2em;
+	position: absolute;
+}
+
+.weatherDescription {
+	left: 3%;
+	top: 28%;
+}
+
+.temperatureInfo {
+	left: 3%;
+	top: 34%;
+
+}
+
+.iconInfo {
+	left: 11%;
+	top: 40%;
+}
+
+.noBorder {
+	border-style: none;
+}
+
+.resultsContainer {
+	font-size: 3.5em;
+	position: absolute;
+	left: 30.5%;
+	line-height: 2em;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: rgb(210, 210, 210);
+}
+
+#error{
+	font-size: 3em;
+	text-align: center;
+}
+
+#directions {
+	font-size: 3em;
+	text-align: center;
+}
+
+.aboutPage {
+	font-size: 2em;
+	text-align: right;
+	margin-bottom: -25px;
+	margin-right: 20px;
+
+}
+
+
+

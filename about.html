@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+	<body>
+
+		<h1>About Travel Explore Guide</h1>
+
+		<h2>Description</h2>
+
+		<p>'Travel Explore Guide' is a website designed to help travelers as well as locals find ideas and place recommendations in different categories, including eating, hiking, sightseeing, shopping, discovering, going out, relaxing, hotels and hostels, sports activities, playing and traveling, and find the weather information. The user types in the name of the city in which he or she is interested and then selects one of the activities from a drop-down list. The user then clicks the button 'Search for places' and names of different places appear on the page, along with pictures if they are available. The weather information appears on the left of the page, thus tying together the idea of traveling and exploring when knowing what weather conditions to expect in the location of interest. Therefore, the user gets a complete idea of what the weather is like in his or her chosen city and can then plan accordingly as to what he or she wants to do. The names of the places are clickable and, when clicked, they direct the user to a page containing more information about the place, for example, the description, more photos, location on a map, opening hours, etc.</p>
+
+		<h2>Motivation and Creation Process</h2>
+
+		<p>My inspiration for creating this website was the upcoming fall break and the students around me struggling with choosing their destinations and itineraries. Traveling is also a big passion of mine and I am always interested in exploring the places that I am traveling to. Therefore, I was searching for different traveling APIs for this assignment and I came across the Sygic Travel API: <br>
+			http://docs.sygictravelapi.com/1.0/#home </p>
+
+		<p>This API provides information about places in the 11 different categories that were mentioned above and it is possible to search for places in 9321 cities. The list of cities is available here: <br>
+			https://docs.google.com/spreadsheets/d/1qlTdvBlLDo3fxBTSqmbqQOQJXsynfukBHxI_Xpi2Srw/edit#gid=1588428987 </p>
+
+		<p>Each city is assigned an ID value (available in the cities list spreadsheet) that must be used in the API request. Therefore, I converted the Excel spreadsheet to a json file and then to a js file that contains all the names of the cities as objects in an array. Then I wrote a function that would take the input city name and loop through all the cities in the cities list array and then return back its respective ID which would then be passed into the API request URL.</p>
+
+		<p>I also limited the results to 12, because I found that 12 usually included a good overview of different places, however was still specific enough to offer particular choices. After 12 results some cities tend to give back data only containing a name like 'restaurant' or 'cafe', which is not specific enough, because the Sygic API database does not have enough information.</p>
+
+		<p>I started working on this project quite early and I was trying to make things work step by step. At first, I explored the API and the possibilities it offered. The concept of the project only fully crystalized after I knew what kind of information I could get from the API. Then I decided that I wanted to make a search page for places in different categories in cities chosen by the user. At first, I only worked with one input box and hard-coded the category to always be 'eating'. Thus, I was working on passing different cities' IDs to the API request URL and receiving back data on the respective city. When that was working, I added another input box – the categories box. I made this to be a drop-down list so it would be completely clear to the user what the available options are. I then worked on passing the user’s chosen category to the API request URL after clicking the button. When the button is clicked, an API request is made containing both of the user's inputs – the city name and chosen category and respective data is displayed on the page. If the particular city is not on the database or it has been misspelled, a message appears on the page that says: 'City Not Found'. I also had to make sure that the city name starts with a capitalized letter in order to find it in the cities names and IDs list, thus I added a function that capitalizes the first letter of the City input box.</p>
+
+		<p>When the first API was working I also added the second API – the OpenWeatherMap API: <br>
+			https://openweathermap.org/api</p>
+
+		<p>I wanted to get information about the current temperature and weather conditions in the same city that is being looked for in the Sygic API request. The Weather API request is also made after the user has finished typing in the input boxes and presses the 'Search' button. I also added weather icons which are different based on the weather conditions.</p>
+
+		<h2>Design</h2>
+
+		<p>In terms of design I wanted my page to be minimalistic looking so the information would stand out and it would be easy to use my page. I think that the two input boxes are pretty straight-forward and I did not face any issues during user-testing where people would not know what to do. I chose three main colors that dominate my page, which are grey for the background (it is actually a slight gradient, so it wouldn't look as plain as just one color), black for the letters and a purplish pink for a touch of color. The names of the places are displayed in the center of the page and are aligned by the photos so it would look clean and organized. The weather information is on the left side of the page because it has an informational purpose and putting it on either side of the page is a practice that I have observed news outlets websites do very often, which I think works very well. I chose the title font to be different from the rest, because I wanted it to stand out a little more, however, I think that it works well with the rest of the website.</p>
+
+		<h2>Challenges</h2>
+
+		<p>The biggest challenge I faced was making the data display on the page exactly where I wanted it to display. At first was struggling with the orders of the Divs and I had accidentally put them in an order that did not allow for some information to display, because one Div was covering another Div. I was also struggling with positioning the elements that were not in the center of the page and trying to understand the correct order of Divs for those elements.</p>
+
+		<h2>Possible Next Steps</h2>
+
+		<p>Lastly, I would like to elaborate on this project by adding more information about the places and maybe using a different API that would allow to display more information about each place on my webpage, so the users would get an even broader idea about what each place is.</p>
+
+		<h2>Links to outside code resources:</h2>
+
+		<p>I used this gradient generator to create the gradient background: <br>
+			https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%28248\%2C80\%2C50\%2C1\%29\%200\%25\%2C\%20rgba\%28241\%2C111\%2C92\%2C1\%29\%2050\%25\%2C\%20rgba\%28246\%2C41\%2C12\%2C1\%29\%2051\%25\%2C\%20rgba\%28240\%2C47\%2C23\%2C1\%29\%2071\%25\%2C\%20rgba\%28231\%2C56\%2C39\%2C1\%29\%20100\%25\%29\%3B'</p>
+
+		<p>I used the code from here to convert the first letter of the city input box to uppercase: <br>
+			https://codepen.io/vijaylathiya/pen/YPLzYE</p>
+
+		<h2>PS,</h2>
+
+		<p>If the API key exceeds the requests, here is another one: <br>2BiWeEu50o9eW3amZHbow7dxizmafHzV6jLxYLV0</p>
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

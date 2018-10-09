@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<!-- <meta name="viewport" content="width=device-width"> -->
+		<title>Travel Explore Guide</title> 
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<!-- CONTENT GOES HERE -->
+		<a href="about.html"><div class="aboutPage">About</div></a>
+		<h1>Which city in the world do you want to go to?</h1>
+
+		<div> 
+		
+			<input class="center_spacing" id="the-input" type="text" placeholder="Type the name of the city...">
+
+
+			<select class="center_spacing" id="the-input2">
+				<option value="eating">Eating</option>
+				<option value="hiking">Hiking</option>
+				<option value="sightseeing">Sightseeing</option>
+				<option value="shopping">Shopping</option>
+				<option value="discovering">Discovering</option>
+				<option value="going_out">Going Out</option>
+				<option value="relaxing">Relaxing</option>
+				<option value="sleeping">Hotels and Hostels</option>
+				<option value="doing_sports">Sports Activities</option>
+				<option value="playing">Playing</option>
+				<option value="traveling">Traveling</option>
+
+
+			</select>
+
+			<button class="center_spacing" id="the-button">Search for places</button>
+
+			<div id="directions"></div>
+			<div class="resultsContainer" id="photos-list"></div>
+
+ 			<div class="weatherInfo weatherDescription" id="weather"></div>
+ 			<div class="weatherInfo temperatureInfo" id="temperature"></div>
+ 			<div class="weatherInfo iconInfo" id="icon"></div>
+ 			<div id="error"></div>
+
+
+ 		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/cities_list.js"></script>
+	</body>
+</html>
